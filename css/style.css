@@ -38,7 +38,7 @@ p {
 
 .content__wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto 70px;
   padding: 0 15px;
@@ -113,12 +113,13 @@ header:before {
   font-size: 13px;
   line-height: 36px;
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
   text-transform: uppercase;
+  transition: text-decoration-color 0.3s;
 }
 
 .header__link:hover {
-  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 1);
 }
 
 /* Header Title */
@@ -210,6 +211,7 @@ header:before {
   z-index: 2;
   bottom: 18px;
   left: 18px;
+  right: 18px;
   max-width: 370px;
   padding: 7.5% 8.4%;
   border: 3px solid #b59f5b;
@@ -232,16 +234,14 @@ header:before {
   text-decoration: none;
   text-transform: uppercase;
   color: #b59f5b;
-  transition: all 0.3s;
+  text-decoration: underline 0.15em rgba(181, 159, 91, 0);
+  transition: text-decoration-color 0.3s;
 }
 
 .trend__tags__link:hover {
-  text-decoration: underline;
+  text-decoration-color: rgba(181, 159, 91, 1);
 }
 
-.post__tags__link:hover {
-  text-decoration: underline;
-}
 
 .trend__title {
   font-size: 20px;
@@ -254,6 +254,7 @@ header:before {
 .trend__title__link {
   color: inherit;
   text-decoration: none;
+  transition: all 0.3s ease-in;
 }
 
 .trend__title__link:hover {
@@ -265,8 +266,8 @@ header:before {
 /* Main styles start */
 
 .main {
+  width: 67%;
   max-width: 780px;
-  margin-right: 119px;
 }
 
 /* Post */
@@ -274,7 +275,7 @@ header:before {
 .post {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
 }
 
 .post:last-child {
@@ -282,8 +283,8 @@ header:before {
 }
 
 .post__img {
-  min-width: 380px;
-  width: 380px;
+  max-width: 380px;
+  width: 50%;
   margin-right: 31px;
   padding-top: 1px;
 }
@@ -312,7 +313,8 @@ header:before {
 }
 
 .post__title {
-  width: 335px;
+  max-width: 335px;
+  width: 100%;
   margin-bottom: 28px;
   font-size: 20px;
   font-weight: 700;
@@ -333,7 +335,7 @@ header:before {
 
 .post__desc {
   display: flex;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 }
 
 .post__datetime {
@@ -352,7 +354,235 @@ header:before {
 }
 
 .post__text {
+  max-width: 365px;
+  width: 100%;
   line-height: 22px;
 }
 
 /* Main styles end */
+
+/* Aside styles start */
+
+.aside {
+  width: 270px;
+}
+
+.aside__title {
+  position: relative;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+
+.aside__title::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 106px;
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+  opacity: 0.4;
+}
+
+/* Latest Posts */
+.latest-posts {
+  margin-bottom: 67px;
+}
+
+/* Latest Post */
+.latest-post {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.latest-post__img {
+  position: relative;
+  top: 3px;
+  width: 70px;
+  min-width: 70px;
+  margin-right: 18px;
+}
+
+.latest-post__datetime {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.latest-post__title {
+  padding-top: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.latest-post__link {
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.3s ease-in;
+}
+
+.latest-post__link:hover {
+  color: #b59f5b;
+}
+
+/* Search */
+.search {
+  display: flex;
+  margin-bottom: 59px;
+}
+
+.search__input {
+  width: 222px;
+  height: 48px;
+  padding-left: 17px;
+  padding-right: 17px;
+  font-size: 13px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+  border: none;
+  background-color: #f4f7f6;
+  outline: none;
+}
+
+.search__input:focus {
+  border: 1px solid #b59f5b;
+}
+
+.search__button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: #b59f5b;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-position: center center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in;
+}
+
+.search__button:hover {
+  background-color: #323232;
+}
+
+/* Subscribe */
+.subscribe {
+  margin-bottom: 58px;
+}
+
+.subscribe__input {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 17px;
+  padding-left: 17px;
+  font-size: 13px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+  border: none;
+  background-color: #f4f7f6;
+  outline: none;
+}
+
+.subscribe__input:focus {
+  border: 1px solid #b59f5b;
+}
+
+.subscribe__button {
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b59f5b;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.subscribe__button:hover {
+  background-color: #323232;
+}
+
+/* Tags */
+.tags {
+  margin-bottom: 52px;
+}
+
+.tags__title {
+  margin-bottom: 37px;
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags__item {
+  list-style-type: none;
+}
+
+.tags__link {
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  padding: 3px 13px;
+  font-size: 12px;
+  color: #0f0d0e;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(244, 243, 241, 0);
+  border: 3px solid #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.tags__link:hover {
+  border: 3px solid #b59f5b;
+}
+
+/* * Categories * */
+
+.categories__title {
+  margin-bottom: 23px;
+}
+
+.categories__item {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  list-style-type: none;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.categories__link {
+  padding-right: 3px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  transition: all 0.3s ease-in;
+}
+
+.categories__link:hover {
+  color: #b59f5b;
+}
+
+.categories__amount {
+  position: absolute;
+  top: 3px;
+  font-size: 12px;
+  line-height: 36px;
+  color: #b59f5b;
+  font-weight: 700;
+}
+
+/* Aside styles end */
