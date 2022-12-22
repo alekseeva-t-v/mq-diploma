@@ -172,6 +172,7 @@ header:before {
   max-width: 1660px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 61px;
 }
 
 .trend {
@@ -258,3 +259,100 @@ header:before {
 .trend__title__link:hover {
   color: #b59f5b;
 }
+
+/* Trends styles end */
+
+/* Main styles start */
+
+.main {
+  max-width: 780px;
+  margin-right: 119px;
+}
+
+/* Post */
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.post__img {
+  min-width: 380px;
+  width: 380px;
+  margin-right: 31px;
+  padding-top: 1px;
+}
+
+.post__tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.post__tags__item {
+  margin-right: 18px;
+  list-style-type: none;
+}
+
+.post__tags__link {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b59f5b;
+}
+
+.post__tags__link:hover {
+  text-decoration: underline;
+}
+
+.post__title {
+  width: 335px;
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #0f0d0e;
+}
+
+.post__title__link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+.post__title__link:hover {
+  color: #b59f5b;
+}
+
+.post__desc {
+  display: flex;
+  margin-bottom: 47px;
+}
+
+.post__datetime {
+  min-width: 80px;
+  max-width: 100px;
+  margin-right: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.post__author {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.post__text {
+  line-height: 22px;
+}
+
+/* Main styles end */
