@@ -85,7 +85,7 @@ header:before {
   align-items: center;
   justify-content: space-between;
   padding-top: 27px;
-  margin-bottom: 101px;
+  margin-bottom: 100px;
 }
 
 /* Header logo */
@@ -141,3 +141,120 @@ header:before {
 }
 
 /* Header styles end */
+
+/* Trends styles start */
+
+.trends__title {
+  position: relative;
+  margin-bottom: 39px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+  text-align: center;
+  color: #0f0d0e;
+}
+
+.trends__title::after {
+  content: '';
+  position: absolute;
+  top: 31px;
+  left: calc(50% - 33px);
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+}
+
+.trends__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trend {
+  position: relative;
+  width: calc(25% - 3px);
+  height: 319px;
+  margin-right: 4px;
+  background-color: #414544;
+}
+
+.trend:last-child {
+  margin-right: 0;
+}
+
+.trend::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.trend__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.trend__content {
+  position: absolute;
+  z-index: 2;
+  bottom: 18px;
+  left: 18px;
+  max-width: 370px;
+  padding: 7.5% 8.4%;
+  border: 3px solid #b59f5b;
+}
+
+.trend__tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.trend__tags__item {
+  margin-right: 18px;
+  list-style-type: none;
+}
+
+.trend__tags__link {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b59f5b;
+  transition: all 0.3s;
+}
+
+.trend__tags__link:hover {
+  text-decoration: underline;
+}
+
+.post__tags__link:hover {
+  text-decoration: underline;
+}
+
+.trend__title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+.trend__title__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.trend__title__link:hover {
+  color: #b59f5b;
+}
