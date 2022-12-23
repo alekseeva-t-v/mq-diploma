@@ -5,21 +5,21 @@
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   src: url(../fonts/OpenSans-Regular.woff);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   src: url(../fonts/OpenSans-Bold.woff);
   font-weight: 700;
   font-style: normal;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-size: 15px;
   font-weight: 400;
@@ -40,7 +40,7 @@ p {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto 70px;
+  margin: 0 auto 60px;
   padding: 0 15px;
 }
 
@@ -191,7 +191,7 @@ header:before {
 .trend::after {
   position: absolute;
   z-index: 1;
-  content: "";
+  content: '';
   left: 0;
   top: 0;
   right: 0;
@@ -241,7 +241,6 @@ header:before {
 .trend__tags__link:hover {
   text-decoration-color: rgba(181, 159, 91, 1);
 }
-
 
 .trend__title {
   font-size: 20px;
@@ -378,7 +377,7 @@ header:before {
 }
 
 .aside__title::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 26px;
   left: 106px;
@@ -462,7 +461,7 @@ header:before {
   height: 48px;
   border: none;
   background-color: #b59f5b;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url('../svg/search.svg');
   background-position: center center;
   background-size: 20px;
   background-repeat: no-repeat;
@@ -549,7 +548,7 @@ header:before {
   border: 3px solid #b59f5b;
 }
 
-/* * Categories * */
+/* Categories */
 
 .categories__title {
   margin-bottom: 23px;
@@ -586,3 +585,130 @@ header:before {
 }
 
 /* Aside styles end */
+
+/* Products styles start */
+
+.products__title {
+  position: relative;
+  margin-bottom: 39px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 24px;
+  text-align: center;
+  color: #0f0d0e;
+}
+
+.products__title::after {
+  content: '';
+  position: absolute;
+  top: 31px;
+  left: calc(50% - 33px);
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+}
+
+.products__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.product {
+  position: relative;
+  max-width: 347px;
+  width: 33%;
+}
+
+.product__img {
+  max-width: 300px;
+  width: 86%;
+  height: 202px;
+  margin-left: 7%;
+  margin-right: 7%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.product__wrapper {
+  position: absolute;
+  top: 172px;
+  max-width: 347px;
+  width: 100%;
+  min-height: 267px;
+  padding: 52px 20px 20px 20px;
+  border: 3px solid #b59f5b;
+}
+
+.product__title {
+  font-size: 20px;
+  color: #0f0d0e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product__text {
+  padding-bottom: 23px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+}
+
+.product__link {
+  color: #b59f5b;
+  text-decoration: underline 0.15em rgba(181, 159, 91, 0);
+  transition: text-decoration-color 0.3s;
+}
+
+.product__link:hover {
+  text-decoration-color: rgba(181, 159, 91, 1);
+}
+
+.product__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product_button {
+  width: 140px;
+  height: 49px;
+  padding: auto;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b59f5b;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.product_button:hover {
+  background-color: #323232;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px;
+  color: #0f0d0e;
+  font-weight: 700;
+}
+
+.price__prior {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.price__new {
+  font-size: 20px;
+}
+
+/* Products styles end */
