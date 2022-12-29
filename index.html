@@ -564,5 +564,58 @@
     </div>
   </footer>
   <!-- Footer end -->
+
+  <!-- Pop-up start -->
+  <div class="pop-up _hidden">
+    <div class="pop-up__container">
+      <div class="pop-up__body">
+        <h2 class="pop-up__title">Ваш фидбек</h2>
+        <form action="#!" class="pop-up__form">
+
+          <div class="pop-up__form-row">
+            <label class="pop-up__form-group">
+              <span class="pop-up__form-hint">Как часто вы заходите на сайт?</span>
+              <select class="pop-up__select">
+                  <option selected>Почти каждый день</option>
+                  <option>Несколько раз в неделю</option>
+                  <option>Несколько раз в месяц</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="pop-up__form-row">
+            <span class="pop-up__form-hint">Вы подписаны на e-mail рассылку?</span>
+            <label class="pop-up__radio-group">
+              <input type="radio" class="pop-up__radio" name="radio-group" id="true">
+              <span class="pop-up__radio-group-text">Да</span>
+            </label>
+            <label class="pop-up__radio-group">
+              <input type="radio" class="pop-up__radio" id="false" name="radio-group">
+              <span class="pop-up__radio-group-text">Нет</span>
+            </label>
+          </div>
+
+          <div class="pop-up__form-row">
+            <label class="pop-up__form-group">
+              <span class="pop-up__form-hint">Расскажите какой контент вы хотели бы видеть на нашем сайте?</span>
+              <textarea
+                class="pop-up__textarea"
+                id="textarea"
+                placeholder="Может, больше рецептов?"
+                required
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="pop-up__form-row">
+            <button class="pop-up__button">Отправить</button>
+          </div>
+        </form>
+        <div class="pop-up__close">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pop-up end -->
 </body>
 </html>

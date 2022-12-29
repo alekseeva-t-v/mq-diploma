@@ -55,6 +55,10 @@ p {
   overflow: hidden;
 }
 
+._hidden {
+  display: none;
+}
+
 /* Header styles start */
 
 .header {
@@ -808,6 +812,175 @@ header:before {
 
 /* Footer styles end */
 
+/* Pop-up styles start */
+
+.pop-up {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.pop-up__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up__body {
+  position: relative;
+  width: 390px;
+  margin: auto;
+  padding: 48px 31px 54px;
+  background-color: #ffffff;
+}
+
+.pop-up__title {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0f0d0e;
+}
+
+.pop-up__title::after {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: calc(50% - 33px);
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+  opacity: 0.4;
+}
+
+.pop-up__form-row:nth-child(n + 2) {
+  margin-top: 32px;
+}
+
+.pop-up__form-row:last-child {
+  margin-top: 20px;
+}
+
+.pop-up__form-hint {
+  display: block;
+  max-width: 310px;
+  margin-bottom: 3px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.pop-up__select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  padding-left: 20px;
+  margin-top: 10px;
+  border: 1px solid #cbd1d4;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  color: #333333;
+  background-color: #f4f7f6;
+  border: none;
+  background-image: url('../svg/form-arrows.svg');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 10px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.pop-up__select:focus {
+  border: 1px solid #b59f5b;
+}
+
+.pop-up__radio {
+  display: none;
+}
+
+.pop-up__radio-group {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.pop-up__radio-group:nth-of-type(n + 2) {
+  margin-left: 12px;
+}
+
+.pop-up__radio-group-text::before {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url(../svg/form-empty-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 17px;
+}
+
+.pop-up__radio:checked + .pop-up__radio-group-text::before {
+  background-image: url('../svg/form-circle.svg');
+}
+
+.pop-up__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 330px;
+  max-width: 330px;
+  min-height: 132px;
+  max-height: 200px;
+  margin-top: 5px;
+  padding: 15px 20px;
+  font-family: inherit;
+  font-size: 13px;
+  background-color: #f4f7f6;
+  border: none;
+}
+
+.pop-up__textarea:focus {
+  border: 1px solid #b59f5b;
+}
+
+.pop-up__button {
+  width: 100%;
+  height: 48px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b59f5b;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.pop-up__button:hover {
+  background-color: #323232;
+}
+
+.pop-up__close {
+  position: absolute;
+  top: -26px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url(../svg/form-x.svg);
+  background-size: 18px;
+}
+
+/* Pop-up styles end */
+
 /* 1199px - 641px */
 @media (max-width: 1199px) {
   .wrapper {
@@ -999,6 +1172,45 @@ header:before {
   .socials {
     margin-bottom: 42px;
   }
+
+  .pop-up__body {
+    padding: 48px 29px;
+  }
+
+  .pop-up__title {
+    margin-bottom: 38px;
+    padding-left: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0f0d0e;
+  }
+
+  .pop-up__select {
+    background-position: right 15px center;
+  }
+
+  .pop-up__radio-group-text::before {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+  }
+
+  .pop-up__radio-group:nth-of-type(n + 2) {
+    margin-top: 6px;
+    margin-left: 30px;
+  }
+
+  .pop-up__close {
+    top: -35px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+  }
+
 }
 
 @media (max-width: 1199px) and (orientation: landscape) {
@@ -1226,6 +1438,30 @@ header:before {
 
   .socials {
     margin-bottom: 45px;
+  }
+
+  .pop-up__body {
+    width: 330px;
+    padding: 25px 25px;
+  }
+
+  .pop-up__title {
+    margin-bottom: 38px;
+    padding-left: 2px;
+    font-size: 16px;
+  }
+
+  .pop-up__close {
+    top: -32px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+  }
+
+  .pop-up__textarea {
+    max-width:280px;
+    min-width:280px;
   }
 
 }
