@@ -1215,13 +1215,13 @@ header:before {
 
 @media (max-width: 1199px) and (orientation: landscape) {
   .trend {
-    width: calc(25% - 3px);
+    width: calc(25% - 4px);
   }
 }
 
 @media (max-width: 1199px) and (orientation: portrait) {
   .trend {
-    width: calc(50% - 2px);
+    width: calc(50% - 3px);
   }
 }
 
@@ -1466,13 +1466,13 @@ header:before {
 
 }
 
-@media (max-width: 1199px) and (orientation: landscape) {
+@media (max-width: 640px) and (orientation: landscape) {
   .trend {
     width: calc(50% - 2px);
   }
 }
 
-@media (max-width: 1199px) and (orientation: portrait) {
+@media (max-width: 640px) and (orientation: portrait) {
   .trend {
     width: 100%;
     margin-right: 0;
